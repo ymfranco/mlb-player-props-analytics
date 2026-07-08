@@ -95,6 +95,10 @@ CREATE TABLE pitcher_game_stats (
     walks INTEGER NOT NULL,
 
     runs_allowed INTEGER NOT NULL,
+    opponent_team_id INTEGER NOT NULL,
+
+FOREIGN KEY (opponent_team_id)
+REFERENCES teams(team_id)
 
     FOREIGN KEY (game_id)
         REFERENCES games(game_id),
