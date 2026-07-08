@@ -129,6 +129,8 @@ CREATE TABLE betting_lines (
     over_odds INTEGER NOT NULL,
 
     under_odds INTEGER NOT NULL,
+    
+    sportsbook_line_timestamp DATETIME
 
     FOREIGN KEY (game_id)
         REFERENCES games(game_id),
